@@ -2,28 +2,24 @@ package com.example.sp_check1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
 
-
-public class MainActivity extends AppCompatActivity {
+public class ThirdPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_third_page);
 
-
-      Thread thread=new Thread(){
+        Thread thread=new Thread(){
             @Override
-                public void run(){
+            public void run(){
 
 
                 try {
                     sleep(2000);
-                    Intent intent=new Intent(getApplicationContext(),SecondPage.class);
+                    Intent intent=new Intent(getApplicationContext(),FourthlyPage.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {
@@ -32,9 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
-      thread.start();
-
-
-
+        thread.start();
     }
-}
+    }

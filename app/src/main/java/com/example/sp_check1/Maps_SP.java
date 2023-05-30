@@ -87,8 +87,7 @@ public class Maps_SP extends FragmentActivity implements OnMapReadyCallback {
             LatLng latLng = new LatLng(m.getPosition().latitude,m.getPosition().longitude);
             mMap.addMarker(new MarkerOptions().position(latLng));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,17));
-//           CameraUpdate cameraUpdate= CameraUpdateFactory.newLatLngZoom(latLng,16);
-//            mMap.animateCamera(cameraUpdate);
+
         }
     }
 
@@ -101,7 +100,7 @@ public class Maps_SP extends FragmentActivity implements OnMapReadyCallback {
 
             Intent intent = new Intent(this,ParkingLots.class);
             startActivity(intent);
-            overridePendingTransition(R.drawable.anim,R.drawable.anim);
+
 
         }
         if (tit.equals("gate 3")){
